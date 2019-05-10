@@ -1,5 +1,5 @@
 body{
-    background-image: 
+    background-image:url(../img/bakgrund.jpg);
 }
 h1{
     color: black;
@@ -9,7 +9,10 @@ h2{
     color: burlywood;
     text-align: center;
 }
-title{
+
+div{
     text-align: center;
+    background-color: darkslategray;
+    position: absolute;
 }
 
