@@ -9,17 +9,22 @@ if(isset($_GET["e-post"])){
 ?>
 <?php
 function addToDatabase($namn){
-    $dbServer = "dbtrain.im.uu.se";
+    $dbServer = "localhost";
     $username = "dbtrain_965";
     $password = "htfsyg";
-    $dbname = "användare";
+    $dbname = "dbtrain_965";
 
-    $conn = new mysqli($servername, $username, $password, $dbname)
+    $conn = new mysqli($dbServer, $username, $password, $dbname);
 
-    if ($conn->connect_error)
+    if($conn->connect_error)
     {
         die("något gick fel: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO användare (e-post) VALUES ($epost)" 
+    $sql = "INSERT INTO användare (e-post) VALUES ($epost)" ;
+    if ($conn ->query($sql) === TRUE){
+        echo "personen inlagd";
+    }else{
+        echo "Något gick fel i sqlanropet: " . $sql . "<br>" . $conn->error;
+    }
 }
 ?>
