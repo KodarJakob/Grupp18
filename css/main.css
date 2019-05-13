@@ -15,4 +15,38 @@ div{
     background-color: darkslategray;
     position: absolute;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    width: 40%;
+  }
+  
+  li {
+    display: inline;
+    float: left;
+  }
+  
+  li:last-child{
+    float: right;
+  }
+  
+  li a{
+    display: block;
+    color: black;
+    text-align: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover{
+    background-color:white;
+  }
+  a {
+    display: block;
+    padding: 8px;
+    background-color: white;
+  }
+
 
