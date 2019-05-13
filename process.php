@@ -2,7 +2,7 @@
 <?php
 $epost = "";
 if(isset($_GET["e-post"])){
-    $epost = $_GET['e-post¨'];
+    $epost = $_GET['e-post'];
 
     addToDatabase($epost);
 }
