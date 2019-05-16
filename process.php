@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <?php
 $epost = "";
-if(isset($_GET["e-post"])){
-    $epost = $_GET['e-post'];
+if(isset($_GET["epost"])){
+    $epost = $_GET['epost'];
 
     addToDatabase($epost);
 }
 ?>
 <?php
-function addToDatabase($namn){
+function addToDatabase($epost){
     $dbServer = "localhost";
     $username = "dbtrain_965";
     $password = "htfsyg";
@@ -20,7 +20,7 @@ function addToDatabase($namn){
     {
         die("något gick fel: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO användare (e-post) VALUES ($epost)" ;
+    $sql = "INSERT INTO användare (epost) VALUES ($epost)" ;
     if ($conn ->query($sql) === TRUE){
         echo "personen inlagd";
     }else{
